@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetrus Meilano - Digital Innovation Specialist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo">FEE</div>
+                <div class="logo-subtitle">Digital Innovator</div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="btn-download" id="downloadCV">
+                <span>Download CV</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M8 12L3 7L4.5 5.5L7 8V0H9V8L11.5 5.5L13 7L8 12Z" fill="currentColor"/>
+                    <path d="M0 14H16V16H0V14Z" fill="currentColor"/>
+                </svg>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="status-dot"></div>
+                    <span>Available for Opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="text-reveal">Hi, I'm</span>
+                    <span class="text-reveal gradient-text">Fetrus Meilano</span>
+                </h1>
+                <p class="hero-subtitle text-reveal">
+                    Digital Operations Specialist & AI Automation Expert
+                </p>
+                <p class="hero-description text-reveal">
+                    Transforming complex workflows into elegant automated solutions. 
+                    Specializing in AI integration, digital operations, and creative media production.
+                </p>
+                <div class="hero-actions text-reveal">
+                    <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                        Let's Connect
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0L8.59 1.41L16.17 9H0V11H16.17L8.59 18.59L10 20L20 10L10 0Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="btn-secondary" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">
+                        View My Work
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="4">0</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="100">0</div>
+                        <div class="stat-label">Hours Saved</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-value" data-target="5">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="profile-card">
+                    <div class="profile-glow"></div>
+                    <div class="profile-image-wrapper">
+                        <img src="images/profile.jpg" alt="Fetrus Meilano" class="profile-image">
+                        <!-- Fallback placeholder -->
+                        <div class="profile-placeholder">FM</div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Fetrus Meilano</h3>
+                        <p>Digital Operations Specialist</p>
+                        <div class="profile-social">
+                            <a href="https://linkedin.com/in/fetrusmeilano" class="social-icon" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/username" class="social-icon" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.165 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:emailkamu@email.com" class="social-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">WHO I AM</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    Passionate about leveraging technology to solve real-world problems
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="highlight-box">
+                        <div class="highlight-icon">💡</div>
+                        <div>
+                            <h3>My Philosophy</h3>
+                            <p>Technology should simplify, not complicate. Every system I build is designed with efficiency and user experience at its core.</p>
+                        </div>
+                    </div>
+                    <p class="lead-paragraph">
+                        Lulusan Administrasi Negara dengan passion mendalam dalam digital transformation dan automation. 
+                        Saya percaya bahwa kombinasi antara kreativitas dan teknologi dapat menciptakan solusi yang powerful dan efisien.
+                    </p>
+                    <p>
+                        Dari mengautomasi proses dokumen hingga mengoperasikan drone untuk aerial cinematography, 
+                        saya selalu mencari cara untuk mengoptimalkan workflow dan menciptakan value yang nyata. 
+                        Pengalaman saya mencakup AI integration, digital operations, video production, dan automation systems.
+                    </p>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>AI & Automation</h4>
+                                <p>Implementing AI-driven solutions for document processing and workflow optimization</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Media Production</h4>
+                                <p>Professional video editing and drone cinematography for creative projects</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Digital Strategy</h4>
+                                <p>Building scalable systems that drive productivity and efficiency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="info-card card-blue">
+                        <div class="card-icon">🎯</div>
+                        <h3>Mission</h3>
+                        <p>Empowering businesses through intelligent automation and digital innovation</p>
+                    </div>
+                    <div class="info-card card-purple">
+                        <div class="card-icon">🚀</div>
+                        <h3>Vision</h3>
+                        <p>Creating a future where technology seamlessly enhances human potential</p>
+                    </div>
+                    <div class="info-card card-orange">
+                        <div class="card-icon">⚡</div>
+                        <h3>Impact</h3>
+                        <p>100+ hours saved through automation solutions across multiple projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="expertise-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">WHAT I DO</span>
+                <h2 class="section-title">My Expertise</h2>
+                <p class="section-description">
+                    Specialized skills refined through hands-on experience and continuous learning
+                </p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">🤖</div>
+                        </div>
+                        <h3>AI & Automation</h3>
+                    </div>
+                    <p class="card-description">
+                        Designing and implementing AI-powered automation systems that streamline operations and boost productivity
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">AI Integration</span>
+                        <span class="tag">Process Automation</span>
+                        <span class="tag">Workflow Design</span>
+                        <span class="tag">Python Scripting</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">📊</div>
+                        </div>
+                        <h3>Digital Operations</h3>
+                    </div>
+                    <p class="card-description">
+                        Managing digital workflows, data processing, and system optimization for maximum efficiency
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Document Management</span>
+                        <span class="tag">Data Processing</span>
+                        <span class="tag">System Integration</span>
+                        <span class="tag">Project Coordination</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">🎬</div>
+                        </div>
+                        <h3>Media Production</h3>
+                    </div>
+                    <p class="card-description">
+                        Creating compelling visual content through professional video editing and aerial cinematography
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">Video Editing</span>
+                        <span class="tag">Drone Operations</span>
+                        <span class="tag">Photo Editing</span>
+                        <span class="tag">Content Creation</span>
+                    </div>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="card-header">
+                        <div class="card-icon-wrapper">
+                            <div class="card-icon">💻</div>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <p class="card-description">
+                        Building responsive and modern web interfaces with clean code and best practices
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
+                        <span class="tag">GitHub Pages</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">MY WORK</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    A showcase of impactful solutions and creative works
+                </p>
+            </div>
+            
+            <!-- Project Showcase Grid -->
+            <div class="showcase-grid" id="mediaGallery">
+                <!-- Will be populated by JavaScript -->
+            </div>
+
+            <!-- Projects List -->
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-number">01</div>
+                        <div class="project-meta">
+                            <h3>Document Automation System</h3>
+                            <div class="project-badges">
+                                <span class="badge badge-success">Completed</span>
+                                <span class="badge badge-info">High Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Developed an intelligent document processing system that automatically converts JPG/TXT files to PDF format. 
+                        The solution includes batch processing capabilities, error handling, and quality control mechanisms. 
+                        <strong>Result: 5+ hours saved per week</strong>, significantly improving team productivity.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Automation</span>
+                        <span>PDF Processing</span>
+                        <span>Batch Operations</span>
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">5h</span>
+                            <span class="metric-label">Saved/Week</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">Accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">500+</span>
+                            <span class="metric-label">Docs Processed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-number">02</div>
+                        <div class="project-meta">
+                            <h3>Contact Management Tool</h3>
+                            <div class="project-badges">
+                                <span class="badge badge-success">Completed</span>
+                                <span class="badge badge-warning">Enterprise Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Created a bulk contact conversion system that transforms TXT files into VCF format with advanced data validation. 
+                        Features include duplicate detection, data sanitization, and multi-field support. 
+                        <strong>Enables import of thousands of contacts</strong> in a single operation.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Data Processing</span>
+                        <span>VCF Format</span>
+                        <span>Validation</span>
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">1000+</span>
+                            <span class="metric-label">Contacts/Min</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">99%</span>
+                            <span class="metric-label">Accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">0</span>
+                            <span class="metric-label">Manual Errors</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-number">03</div>
+                        <div class="project-meta">
+                            <h3>AI Workflow Engine</h3>
+                            <div class="project-badges">
+                                <span class="badge badge-primary">In Progress</span>
+                                <span class="badge badge-info">AI-Powered</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Building an intelligent workflow system that integrates AI for document drafting, review automation, and administrative tasks. 
+                        Leverages natural language processing and machine learning to understand context and provide relevant suggestions. 
+                        <strong>Reduces document processing time by 60%</strong>.
+                    </p>
+                    <div class="project-tech">
+                        <span>AI Integration</span>
+                        <span>NLP</span>
+                        <span>Workflow Automation</span>
+                        <span>API Integration</span>
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Time Saved</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">24/7</span>
+                            <span class="metric-label">Availability</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-header">
+                        <div class="project-number">04</div>
+                        <div class="project-meta">
+                            <h3>Interactive Portfolio Platform</h3>
+                            <div class="project-badges">
+                                <span class="badge badge-success">Live</span>
+                                <span class="badge badge-warning">Featured</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Designed and developed a modern portfolio website with responsive design, smooth animations, and optimal performance. 
+                        Hosted on GitHub Pages with continuous deployment pipeline. 
+                        <strong>Showcases technical skills and project outcomes</strong> effectively.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                        <span>GitHub Pages</span>
+                    </div>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">100</span>
+                            <span class="metric-label">Performance</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">A+</span>
+                            <span class="metric-label">Accessibility</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">&lt;2s</span>
+                            <span class="metric-label">Load Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-description">
+                    Have a project in mind? Let's discuss how we can collaborate to bring your vision to life
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p>emailkamu@email.com</p>
+                        <a href="mailto:emailkamu@email.com" class="contact-link">Send Message</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>08xxxxxxxx</p>
+                        <a href="tel:08xxxxxxxx" class="contact-link">Call Now</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>fetrusmeilano</p>
+                        <a href="https://linkedin.com/in/fetrusmeilano" class="contact-link" target="_blank">Connect</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="2" y1="12" x2="22" y2="12"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            </svg>
+                        </div>
+                        <h3>Portfolio</h3>
+                        <p>username.github.io</p>
+                        <a href="https://username.github.io" class="contact-link" target="_blank">Visit Site</a>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <h3>Ready to start a project?</h3>
+                    <p>I'm always open to discussing new opportunities, innovative ideas, or partnerships.</p>
+                    <button class="btn-large" onclick="window.location.href='mailto:emailkamu@email.com'">
+                        Start a Conversation
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0L8.59 1.41L16.17 9H0V11H16.17L8.59 18.59L10 20L20 10L10 0Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">FM</div>
+                    <p>Building the future through digital innovation and intelligent automation.</p>
+                    <div class="footer-social">
+                        <a href="https://linkedin.com/in/fetrusmeilano" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/username" target="_blank">GitHub</a>
+                        <a href="mailto:emailkamu@email.com">Email</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#expertise">Expertise</a>
+                        <a href="#portfolio">Portfolio</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <a href="#">AI Automation</a>
+                        <a href="#">Digital Operations</a>
+                        <a href="#">Media Production</a>
+                        <a href="#">Consulting</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#" id="footerDownloadCV">Download CV</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fetrus Meilano. All rights reserved.</p>
+                <p>Designed & Built with passion 🚀</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
