@@ -528,6 +528,9 @@ body {
     border: 4px solid var(--primary);
     box-shadow: 0 0 60px rgba(0, 255, 136, 0.3);
     animation: morphShape 8s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes morphShape {
@@ -584,9 +587,12 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 5%;
     display: block;
     position: relative;
     z-index: 1;
+    transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .image-fallback {
