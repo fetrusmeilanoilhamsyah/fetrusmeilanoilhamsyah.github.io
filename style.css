@@ -27,45 +27,13 @@ body {
     background: var(--dark);
     color: var(--light);
     overflow-x: hidden;
-    cursor: none;
     opacity: 0;
     animation: pageLoad 0.6s ease forwards;
+    cursor: auto !important; /* Default cursor untuk semua device */
 }
 
 @keyframes pageLoad {
     to { opacity: 1; }
-}
-
-/* ===== CURSOR ===== */
-.cursor-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--frost-blue);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 10000;
-    transition: transform 0.1s ease;
-    mix-blend-mode: difference;
-}
-
-.cursor-outline {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--frost-blue);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all 0.15s ease;
-    mix-blend-mode: difference;
-}
-
-.cursor-outline.hover {
-    width: 48px;
-    height: 48px;
-    background: rgba(77, 171, 247, 0.1);
-    border-color: var(--accent);
 }
 
 /* ===== BACKGROUND ===== */
@@ -875,7 +843,6 @@ section {
     margin-bottom: 100px;
 }
 
-.media-box,
 .media-box {
     aspect-ratio: 16/10;
     border-radius: 20px;
@@ -1704,77 +1671,6 @@ section {
     background: var(--primary);
 }
 
-/* ===== MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px) {
-    /* Nonaktifkan efek berat */
-    .img-glow,
-    .hero::before,
-    .hero::after,
-    .bg-container::before,
-    .bg-container::after {
-        display: none !important;
-        animation: none !important;
-    }
-    
-    /* Kurangi blur dan shadow */
-    .nav {
-        backdrop-filter: none !important;
-        -webkit-backdrop-filter: none !important;
-    }
-    
-    /* Optimasi image */
-    .media-box img,
-    .profile-img {
-        transform: none !important;
-        transition: none !important;
-    }
-    
-    /* Kurangi animasi kompleks */
-    .media-box:hover,
-    .project:hover,
-    .skill-group:hover {
-        transform: none !important;
-    }
-    
-    /* Simplify text effects */
-    .glitch-text::before,
-    .glitch-text::after {
-        display: none !important;
-    }
-    
-    /* Optimasi performance */
-    .hero-image,
-    .image-wrapper {
-        will-change: auto !important;
-        transform: none !important;
-    }
-}
-
-/* ===== TOUCH DEVICE OPTIMIZATION ===== */
-@media (hover: none) and (pointer: coarse) {
-    /* Perbesar touch targets */
-    .nav-link,
-    .btn-main,
-    .btn-ghost,
-    .social-icon,
-    .contact-item {
-        min-height: 44px;
-        min-width: 44px;
-    }
-    
-    /* Touch-friendly buttons */
-    .btn-main,
-    .btn-ghost {
-        padding: 16px 24px !important;
-    }
-    
-    /* Sembunyikan cursor di touch device */
-    .cursor-dot,
-    .cursor-outline {
-        display: none !important;
-    }
-}
-
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
     .hero-grid, .about-grid {
@@ -1976,7 +1872,6 @@ section {
 
 /* ===== LOW-END DEVICE OPTIMIZATION ===== */
 @media (max-width: 480px) {
-    /* Kurangi kompleksitas lebih lanjut */
     .hero-stats {
         grid-template-columns: repeat(2, 1fr) !important;
     }
@@ -1985,41 +1880,13 @@ section {
         grid-template-columns: 1fr !important;
         gap: 16px !important;
     }
-    
-    /* Nonaktifkan background effects */
-    .bg-container::before,
-    .bg-container::after {
-        display: none;
-    }
-    
-    /* Simplify typography */
-    .hero-title {
-        font-size: 32px !important;
-        line-height: 1.2 !important;
-    }
-    
-    .section-title {
-        font-size: 28px !important;
-    }
 }
 
 /* ===== PERFORMANCE OPTIMIZATION ===== */
-/* Promote to GPU hanya untuk elemen penting */
 .hero-image,
 .nav,
 .scroll-to-top {
     will-change: transform;
-}
-
-/* Nonaktifkan animasi jika user prefers reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
 }
 
 /* ===== ACCESSIBILITY ===== */
@@ -2038,8 +1905,6 @@ section {
     .nav,
     .scroll-to-top,
     .scroll-indicator,
-    .cursor-dot,
-    .cursor-outline,
     .bg-container,
     .loading-screen {
         display: none;
