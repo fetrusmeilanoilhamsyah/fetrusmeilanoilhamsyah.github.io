@@ -218,27 +218,27 @@ function updateText(selector, text) {
 const mediaData = [
     { 
         type: 'youtube', 
-        videoId: '8f71Aun2-a4', 
+        videoId: 'x-HGg_KSNtQ',
         title: 'Automation Demo',
-        category: 'Automation'
+        category: 'Automation TXT TO VCF FEE'
     },
     { 
         type: 'youtube', 
         videoId: 'wvNrqNfqIxA', 
         title: 'FONTAGE DRONE',
-        category: 'Workflow'
+        category: 'DOKUMENTASI'
     },
     { 
         type: 'youtube', 
         videoId: 'F9RKmwmMwb8', 
-        title: 'Automation Demo',
-        category: 'AI'
+        title: 'Automation Demo JPG TO PDF',
+        category: 'AUTOMASI JPG TO PDF'
     },
     { 
         type: 'image', 
         src: 'images/work1.jpg', 
         title: 'Dashboard Design',
-        category: 'Automation',
+        category: 'EDITING ',
         fallback: 'https://via.placeholder.com/800x500/1E3A8A/E6F1FF?text=Automation+Demo'
     },
     { 
@@ -251,8 +251,8 @@ const mediaData = [
     { 
         type: 'image', 
         src: 'images/work3.jpg', 
-        title: 'Dashboard Design',
-        category: 'UI/UX',
+        title: 'BOT TELEGRAM',
+        category: 'BOT/AUTOMASI',
         fallback: 'https://via.placeholder.com/800x500/4DABF7/0A192F?text=Dashboard+Design'
     },
 ];
